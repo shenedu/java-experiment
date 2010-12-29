@@ -1,0 +1,13 @@
+
+enwiki-latest-pages-articles.xml 28G
+index	7.5G
+CPU	AMD Athlon(tm) II X4 635 Processor
+MEM	4G
+
+index performance
+MMapDirectory: 32min (merge factor 2000, RAMbuffer 500M)
+NIOFSDirectory: 32min (merge factor 1000, RAMbuffer 400M)
+MMapDirectory:1h (merge factor default, RAMbuffer default)
+
+
+
