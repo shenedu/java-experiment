@@ -74,6 +74,10 @@ public class QueenPuzzle implements Puzzle<Position, Move> {
         return new Position(0, new int[] { 0 });
     }
 
+    public int getQueenSize() {
+        return queenSize;
+    }
+
     @Override
     public boolean isGoal(Position position) {
         return position.row == queenSize;
