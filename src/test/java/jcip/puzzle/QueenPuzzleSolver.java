@@ -32,9 +32,14 @@ public class QueenPuzzleSolver {
     }
 
     public static void main(String[] args) {
-        QueenPuzzle puzzle = new QueenPuzzle(26);
-        QueenPuzzleSolver solver = new QueenPuzzleSolver(puzzle);
-        List<Move> result = solver.solve();
-        System.out.println(result);
+        for (int i = 8; i < 100; ++i) {
+            long start = System.currentTimeMillis();
+            QueenPuzzle puzzle = new QueenPuzzle(i);
+            QueenPuzzleSolver solver = new QueenPuzzleSolver(puzzle);
+            List<Move> result = solver.solve();
+            System.out.println("solve problem size of " + i + " takes time "
+                    + (System.currentTimeMillis() - start) + " ms; result: "
+                    + result);
+        }
     }
 }
