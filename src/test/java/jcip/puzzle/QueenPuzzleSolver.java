@@ -32,9 +32,9 @@ public class QueenPuzzleSolver {
     }
 
     public static void main(String[] args) {
-        for (int i = 8; i < 100; ++i) {
+        for (int i = 0; i < 30; ++i) {
             long start = System.currentTimeMillis();
-            QueenPuzzle puzzle = new QueenPuzzle(i);
+            QueenPuzzle puzzle = new QueenPuzzle(29);
             QueenPuzzleSolver solver = new QueenPuzzleSolver(puzzle);
             List<Move> result = solver.solve();
             System.out.println("solve problem size of " + i + " takes time "
