@@ -1,4 +1,4 @@
-package jcip;
+package lang;
 
 import java.util.Random;
 import java.util.concurrent.ConcurrentMap;
@@ -32,26 +32,26 @@ public class CacheTest {
 		}
 	}
 
+	// use jconsole. No OutOfMemoryError!
 	@Test
 	public void testCache() {
 
 		ConcurrentMap<Object, Object> map = new MapMaker().softKeys()
 				.softValues().makeMap();
-		for (int i = 0; i < 10; i++) {
-			map.put(1, 1);
-			
-			System.out.println(map);
-		}
-
-//		
-//		for (;;) {
-//			map.put(new MyKey(), new MyValue());
-////			map.get
-//			try {
-//				TimeUnit.MILLISECONDS.sleep(r.nextInt(10));
-//			} catch (InterruptedException ignore) {
-//			}
+//		for (int i = 0; i < 10; i++) {
+//			map.put(1, 1);
+//			
+//			System.out.println(map);
 //		}
+
+		for (;;) {
+			map.put(new MyKey(), new MyValue());
+			// map.get
+			try {
+				TimeUnit.MILLISECONDS.sleep(r.nextInt(10));
+			} catch (InterruptedException ignore) {
+			}
+		}
 
 	}
 }
