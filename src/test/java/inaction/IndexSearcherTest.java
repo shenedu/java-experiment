@@ -60,9 +60,9 @@ public class IndexSearcherTest {
         TopDocs topDocs = searcher.search(query, 1);
         Assert.assertEquals(1, topDocs.totalHits);
     }
-    
-    public void testQueryParser(){
-//        Qu
+
+    public void testQueryParser() {
+        // Qu
     }
 
     @After

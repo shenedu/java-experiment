@@ -14,20 +14,20 @@ import org.xml.sax.SAXException;
  * 
  */
 public class App {
-	private static final Logger logger = Logger.getLogger(App.class);
+    private static final Logger logger = Logger.getLogger(App.class);
 
-	public static void main(String[] args) throws ParserConfigurationException,
-			SAXException, IOException {
-		logger.info("start");
-		WikipediaIndexBuilder builder = new SaxWikipediaIndexBuilder();
-		File wiki = new File(
-				"/home/feng/Downloads/apache-mahout-examples/wikipedia/enwiki-20070527-pages-articles.xml");
-		builder.init(new MMapDirectory(new File("/tmp/index")));
+    public static void main(String[] args) throws ParserConfigurationException,
+            SAXException, IOException {
+        logger.info("start");
+        WikipediaIndexBuilder builder = new SaxWikipediaIndexBuilder();
+        File wiki = new File(
+                "/home/feng/Downloads/apache-mahout-examples/wikipedia/enwiki-20070527-pages-articles.xml");
+        builder.init(new MMapDirectory(new File("/tmp/index")));
 
-		builder.process(wiki);
+        builder.process(wiki);
 
-		builder.close();
+        builder.close();
 
-		logger.info("end");
-	}
+        logger.info("end");
+    }
 }

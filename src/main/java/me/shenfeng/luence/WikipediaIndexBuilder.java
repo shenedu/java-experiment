@@ -11,10 +11,10 @@ import org.xml.sax.SAXException;
 
 public interface WikipediaIndexBuilder extends Closeable {
 
-	public void onItem(WikipediaItem item);
+    public void onItem(WikipediaItem item);
 
-	public void process(File wikipediapath) throws ParserConfigurationException,
-			SAXException, IOException;
+    public void process(File wikipediapath)
+            throws ParserConfigurationException, SAXException, IOException;
 
-	void init(Directory directory);
+    void init(Directory directory);
 }

@@ -120,7 +120,7 @@ public class IndexingTest {
     @Test
     public void testIndexReader() throws CorruptIndexException, IOException {
         IndexReader reader = IndexReader.open(directory);
-//        Collection<IndexCommit> commits = IndexReader.listCommits(directory);
+        // Collection<IndexCommit> commits = IndexReader.listCommits(directory);
 
         Assert.assertEquals(ids.length, reader.maxDoc());
         Assert.assertEquals(ids.length, reader.numDocs());

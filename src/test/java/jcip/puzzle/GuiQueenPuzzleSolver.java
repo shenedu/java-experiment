@@ -67,7 +67,7 @@ public class GuiQueenPuzzleSolver extends JPanel implements KeyListener,
         jFrame.add(solver);
         jFrame.pack();
         jFrame.setVisible(true);
-//        new Timer(5500, solver).start();
+        // new Timer(5500, solver).start();
         List<Move> result = solver.solve();
         System.out.println(result);
     }
